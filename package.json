@@ -1,0 +1,19 @@
+{
+  "name": "fileguard",
+  "version": "1.0.0",
+  "description": "A decentralized file storage and sharing platform",
+  "main": "scripts/deploy.js",
+  "scripts": {
+    "deploy": "node scripts/deploy.js"
+  },
+  "dependencies": {
+    "web3": "^1.7.0",
+    "@openzeppelin/contracts": "^4.0.0",
+    "@chainlink/contracts": "^0.4.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3"
+  },
+  "license": "MIT"
+}
