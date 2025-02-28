@@ -1,0 +1,33 @@
+# Node.js dependencies
+node_modules/
+
+# Build artifacts
+build/
+dist/
+
+# Truffle and Hardhat configuration files
+truffle.js
+truffle-config.js
+hardhat.config.js
+
+# Compiled contracts
+artifacts/
+cache/
+
+# Test files
+test/
+tests/
+
+# Coverage reports
+coverage/
+
+# Environment files
+.env
+.env.example
+
+# Logs
+logs/
+*.log
+
+# Linting and formatting cache
+.eslintcache
