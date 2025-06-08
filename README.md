@@ -1,84 +1,134 @@
-Sure! Below is a template for a `README.md` file tailored for your `FileGuard` project. This template includes sections for the project description, features, getting started, usage, contributing, license, and contact information.
+# 🛡️ FileGuard
 
-```markdown
-# FileGuard
+**FileGuard** is a decentralized file storage and sharing system powered by **Ethereum smart contracts**. It supports subscription-based access with multiple **tiers and billing cycles**, allowing users to **upload, manage, and securely share encrypted files** on-chain with full transparency and control.
 
-FileGuard is a smart contract for a file storage and sharing service built on the Ethereum blockchain. It offers subscription-based storage plans with different tiers (Free, Basic, Pro, Business) and billing cycles (Monthly, Quarterly, Yearly). Users can upload files, manage storage usage, and securely share files with others using encrypted keys.
+---
 
-## Features
+## 🚀 Features
 
-- **Subscription Tiers**: Free, Basic, Pro, Business.
-- **Billing Cycles**: Monthly, Quarterly, Yearly.
-- **File Management**: Upload files and manage storage usage.
-- **File Sharing**: Securely share files with access control and encryption.
-- **Smart Contracts**: Built using Solidity for secure and transparent operations.
-- **Price Feed Integration**: Uses Chainlink price feeds to convert USD prices to FIL (Filecoin).
+- 🔐 **Subscription-Based Access**
+  - Tiers: Free | Basic | Pro | Business
+  - Billing: Monthly | Quarterly | Yearly
 
-## Getting Started
+- 📂 **Decentralized File Management**
+  - Upload and register files with metadata
+  - Track usage and storage consumption
 
-### Prerequisites
+- 🔄 **Secure File Sharing**
+  - Share file access with recipients via on-chain permissions and encrypted keys
 
-- Node.js
-- npm
-- Web3.js
-- Ethereum wallet (e.g., MetaMask)
+- 💰 **Tokenized Payments**
+  - Pay for subscriptions in ETH or FIL
+  - Integrated with **Chainlink price feeds** for accurate USD to crypto conversion
 
-### Installation
+- 🧠 **Smart Contract Controlled**
+  - Built in **Solidity** with modular architecture for subscriptions, access control, and sharing logic
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd your-repo-name
-   ```
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
+---
 
-### Deployment
+## 📦 Getting Started
 
-1. Deploy the `FileGuard` smart contract to an Ethereum network.
-2. Update the front-end code with the deployed contract address and ABI.
+### ✅ Prerequisites
 
-### Usage
+- Node.js ≥ 16
+- npm or yarn
+- MetaMask wallet
+- Hardhat (or Truffle)
+- Web3.js or Ethers.js
+- Infura or Alchemy API
 
-1. **Subscribe to a Plan**:
-   - Select a subscription tier and billing cycle.
-   - Click the "Subscribe" button to subscribe to the chosen plan.
+---
 
-2. **Upload a File**:
-   - Enter the file hash and size.
-   - Click the "Upload" button to upload the file.
+### 🔧 Installation
 
-3. **Share a File**:
-   - Enter the file hash, recipient's Ethereum address, and encrypted key.
-   - Click the "Share" button to grant access to the recipient.
-
-## Contributing
-
-Contributions are welcome! Please read the [CONTRIBUTING](CONTRIBUTING.md) guidelines before getting started. You can contribute by:
-- Reporting bugs or issues.
-- Suggesting new features.
-- Submitting pull requests with improvements or bug fixes.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-For any questions or feedback, please contact [tamheednazir1@gmail.com].
+```bash
+git clone https://github.com/IamTamheedNazir/FileGuard.git
+cd FileGuard
+npm install
 ```
 
-### Instructions to Create the `README.md` File
+---
 
-1. Open your project directory in a text editor or IDE.
-2. Create a new file named `README.md`.
-3. Copy and paste the above content into the `README.md` file.
-4. Replace placeholders like `your-username`, `your-repo-name`, and `your-email@example.com` with your actual GitHub username, repository name, and email address.
-5. Save the file.
+### 🛠 Deployment (Hardhat)
 
-This `README.md` file provides a clear and concise overview of your project, helping users understand how to get started and contribute to your project.
+1. Set up your `.env` file:
+   ```env
+   PRIVATE_KEY=your_wallet_private_key
+   INFURA_API_KEY=your_infura_project_id
+   ```
+
+2. Compile and deploy to Sepolia:
+   ```bash
+   npx hardhat compile
+   npx hardhat run scripts/deploy.js --network sepolia
+   ```
+
+3. Copy the deployed contract address and ABI to your frontend config.
+
+---
+
+## 💡 Usage
+
+### 📝 Subscribe to a Plan
+- Choose your tier and billing cycle
+- Submit the subscription via MetaMask
+
+### 📤 Upload a File
+- Provide the file hash and size
+- Smart contract stores metadata with your subscription ID
+
+### 🤝 Share a File
+- Enter the file hash, recipient’s address, and encrypted access key
+- The recipient can retrieve and decrypt the file via smart contract query
+
+---
+
+## 🌐 Tech Stack
+
+- **Solidity** – Smart contracts for subscription & sharing logic
+- **Chainlink** – Price feed integration for real-time crypto rates
+- **Hardhat** – Development and deployment
+- **IPFS** *(Planned)* – Off-chain storage backend
+- **React + Ethers.js** *(Frontend, Optional)* – Web3 integration for user interaction
+
+---
+
+## 🧩 Project Structure
+
+```bash
+FileGuard/
+├── contracts/            # Smart contract files (Solidity)
+├── scripts/              # Deployment scripts
+├── test/                 # Contract test cases
+├── frontend/             # React-based Web3 UI (optional)
+├── .env                  # Environment variables (ignored)
+├── hardhat.config.js     # Hardhat config
+├── README.md             # This documentation
+```
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions from the community!
+
+- Fork the repository
+- Create a new branch
+- Submit a pull request with changes
+
+Before contributing, please check the [CONTRIBUTING.md](CONTRIBUTING.md) (coming soon).
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.  
+See the [LICENSE](LICENSE) file for more information.
+
+---
+
+## 📬 Contact
+
+Created with ❤️ by **Tamheed Nazir**  
+📧 Email: [tamheednazir1@gmail.com](mailto:tamheednazir1@gmail.com)  
+🔗 GitHub: [@IamTamheedNazir](https://github.com/IamTamheedNazir)
